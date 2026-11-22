@@ -2,7 +2,7 @@
 
 **The workshop of the Rune realm.** Every change to [rune](https://github.com/devneet-id/rune) is proved here before it is committed there.
 
-> Never change Rune without testing it like a user. — [The Workshop](https://github.com/devneet-id/lore/blob/main/realms/rune/lore/acts/4-the-beyond/the-workshop.md)
+> Never change Rune without testing it like a user. — [The Workshop](https://github.com/devneet-id/lore/blob/main/realms/rune/acts/4-the-beyond/the-workshop.md)
 
 ## Three repos, one flow
 
@@ -49,12 +49,12 @@ php cast scenario --here
 - **Use `composer dump-autoload`, not `composer install` or `composer update`.** It only writes `vendor/autoload.php`, mapping `Rune\` to `../rune/` (see `composer.json`). There is nothing to download.
 - `composer.json` has **no `require`** and the repo has **no `composer.lock`** on purpose. A `require "devneet/rune"` would install the Packagist release into `vendor/` as a second source for `Rune\`: a class missing from `../rune` would then load silently from the old release, and a trial could pass on code you are not testing.
 - Run `composer dump-autoload` again only when `composer.json` changes. If `php cast` fails after a pull, delete `vendor/` and run it again.
-- To test **the released package** (what users get), use another folder with its own `composer.json` and `composer require devneet/rune` — see [The Workshop](https://github.com/devneet-id/lore/blob/main/realms/rune/lore/acts/4-the-beyond/the-workshop.md).
+- To test **the released package** (what users get), use another folder with its own `composer.json` and `composer require devneet/rune` — see [The Workshop](https://github.com/devneet-id/lore/blob/main/realms/rune/acts/4-the-beyond/the-workshop.md).
 
 ## The cycle of a change
 
 1. **rune-dev** — write or extend a scenario until its trial **fails** and shows the problem. A fix without a trial is a guess.
-2. **rune** — fix or add the feature. Keep files CRLF, `php -l` every changed PHP file, keep the [Laws](https://github.com/devneet-id/lore/blob/main/realms/rune/lore/acts/4-the-beyond/laws.md).
+2. **rune** — fix or add the feature. Keep files CRLF, `php -l` every changed PHP file, keep the [Laws](https://github.com/devneet-id/lore/blob/main/realms/rune/acts/4-the-beyond/laws.md).
 3. **rune** — raise the Phantasm version of every rune that changed (`php evolute sentinel --phantasm-repair=<Rune>` or `--phantasm-upgrade=<Rune>` from `exploration/`).
 4. **rune-dev** — run **every** trial until green, then check coverage:
    ```bash
@@ -62,7 +62,7 @@ php cast scenario --here
    cd scenario/coverage && php cast coverage
    ```
    Each scenario leaves its proof in `scenario/<name>/.proof/` (report + what it made).
-5. **lore** — update the reference, [Known Issues](https://github.com/devneet-id/lore/blob/main/realms/rune/lore/acts/4-the-beyond/known-issues.md) and [Versioning](https://github.com/devneet-id/lore/blob/main/realms/rune/lore/acts/4-the-beyond/versioning.md), then add a [chronicle](https://github.com/devneet-id/lore/tree/main/chronicle) entry.
+5. **lore** — update the reference, [Known Issues](https://github.com/devneet-id/lore/blob/main/realms/rune/acts/4-the-beyond/known-issues.md) and [Versioning](https://github.com/devneet-id/lore/blob/main/realms/rune/acts/4-the-beyond/versioning.md), then add a [chronicle](https://github.com/devneet-id/lore/tree/main/chronicle) entry.
 
 ## Rules of the bench
 
