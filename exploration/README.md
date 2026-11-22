@@ -1,6 +1,6 @@
 # exploration/
 
-**The beyond:** advanced development of Rune's modes. Each mode unlocks a folder next to the runite, so they are explored here, apart from the scenarios. See [Modes](https://github.com/devneet-id/lore/blob/main/realms/rune/reference/modes.md).
+**The beyond:** advanced development of Rune's modes. Each mode unlocks a folder next to the runite, so they are explored here, apart from the scenarios. See [Modes](https://github.com/devneet-id/lore/blob/main/realms/rune/modes.md).
 
 | Runite | Mode | Caption | Unlocks |
 |---|---|---|---|
